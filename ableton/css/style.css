@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Nunito Sans',"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+
+
+/** Navbar primary start **/
+
+.navbar-primary {
+    padding: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+
+
+
+.navbar-primary .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-primary .nav-item {
+    list-style-type: none;
+    padding-left: 37px;
+}
+
+.navbar-primary .nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;    
+}
+
+
+.navbar-primary .nav-item::first-letter{
+    text-transform: capitalize;
+}
+
+.navbar-primary .nav-item:nth-child(9) {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.navbar-primary .item-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.navbar-primary .item-active a {
+    text-transform: capitalize;
+    padding-left: 2px;
+    color:#ff764d;
+}
+
+.navbar-primary .item-active i {
+    position: absolute;
+    bottom:0;
+    margin-left: 1px;
+    color:#ff764d;
+    font-size: 1.35rem !important;
+}
+
+
+
+
+.navbar-secondary {
+    padding: 1rem;
+}
+
+
+.navbar-secondary .navbar-nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-secondary .nav-item {
+    list-style-type: none;
+    padding-left: 37px;
+}
+
+.navbar-secondary .nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: bold;    
+}
+
+.navbar-secondary .item-active a {
+    color:#ff764d;
+}
+
+
+.navbar-secondary .nav-item::first-letter{
+    text-transform: capitalize;
+}
+
+
+
