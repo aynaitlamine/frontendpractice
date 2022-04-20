@@ -47,6 +47,9 @@
             <li class="main-nav__link-list__item is-active">
               <button class="abl-btn--reset main-nav__more-button">
                 <span>more</span>
+                <span class="main-nav__icon--collapse">
+                  <span class="main-nav__icon"></span>
+                </span>
                 <span class="main-nav__hide-on-more-expanded">
                   <span class="main-nav__icon"></span>
                 </span>
@@ -65,7 +68,96 @@
               <a href="#">log in or register</a>
             </li>
           </ul>
-          <div class="main-nav__more"></div>
+          <div class="main-nav__more" id="more">
+            <section class="main-nav__section">
+              <h3 class="main-nav__section-heading">More on Ableton.com:</h3>
+              <ul class="main-nav__link-list">
+                <li class="main-nav__link-list__item">
+                  <a href="#">blog</a>
+                </li>
+
+                <li class="main-nav__link-list__item">
+                  <a href="#">ableton for the Classroom</a>
+                </li>
+
+                <li class="main-nav__link-list__item">
+                  <a href="#">ableton for Colleges and Universities</a>
+                </li>
+
+                <li class="main-nav__link-list__item">
+                  <a href="#">certified Training</a>
+                </li>
+
+                <li class="main-nav__link-list__item is-active">
+                  <a href="#">about Ableton</a>
+                </li>
+
+                <li class="main-nav__link-list__item">
+                  <a href="#">jobs</a>
+                </li>
+
+                <li class="main-nav__link-list__item">
+                  <a href="#">apprenticeship</a>
+                </li>
+              </ul>
+            </section>
+            <section class="main-nav__section">
+              <h3 class="main-nav__section-heading">More from Ableton:</h3>
+              <div class="main-nav__slideable-wrapper">
+                <div class="main-nav__slideable">
+                  <ul class="main-nav__row main-nav__link-list">
+                    <li class="main-nav__col main-nav__col--25p">
+                      <a href="#">
+                        <div>
+                          <h4>loop</h4>
+                          <p>
+                            Watch Talks, Performances and Features from
+                            Ableton's Summit for Music Makers
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="main-nav__col main-nav__col--25p">
+                      <a href="#">
+                        <div>
+                          <h4>Learning Music</h4>
+                          <p>
+                            Learn the fundamentals of music making right in your
+                            browser.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="main-nav__col main-nav__col--25p">
+                      <a href="#">
+                        <div>
+                          <h4>Learning Synths</h4>
+                          <p>
+                            Get started with synthesis using a web-based synth
+                            and accompanying lessons.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="main-nav__col main-nav__col--25p">
+                      <a href="#">
+                        <div>
+                          <h4>Making Music</h4>
+                          <p>
+                            Some tips from 74 Creative Strategies for Electronic
+                            Producers.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </nav>
 
@@ -89,5 +181,18 @@
     </header>
     <!-- Navbar primary end -->
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script>
+      document
+        .querySelector(".abl-btn--reset")
+        .addEventListener("click", function () {
+          document.getElementById("more").style.display = "block";
+          document.querySelector(
+            ".main-nav__hide-on-more-expanded .main-nav__icon"
+          ).style.display = "none";
+          document.querySelector(
+            ".main-nav__icon--collapse .main-nav__icon"
+          ).style.display = "inline-block";
+        });
+    </script>
   </body>
 </html>

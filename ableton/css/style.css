@@ -1,9 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
+
 @font-face {
-    font-family: "Futura-regular";
-    src: url("../fonts/FuturaPT-Book.woff2");
-  }
+    font-family: 'Futura PT Book';
+
+    src: url('../fonts/FuturaPT-Book.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Light';
+    src: url('../fonts/FuturaPT-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Meduim';
+    src: url('../fonts/FuturaPT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Bold';
+    src: url('../fonts/FuturaPT-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Heavy';
+    src: url('../fonts/FuturaPT-Heavy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 
 
 * {
@@ -18,7 +54,7 @@ body {
     width: 100vw;
     margin: 0;
     font-size: 16px;
-    font-family: 'Futura PT',Avenir,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Futura PT Light ',Avenir,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 1.5;
 
     font-weight: normal;
@@ -54,7 +90,6 @@ a {
 
 .main-nav__link-list{
     display: flex;
-    align-items: center;
     padding-left: 8.75rem;
     padding-right: 2.5rem;
 }
@@ -83,11 +118,11 @@ a {
     margin-right: 0.625rem;
     margin-left: 0.625rem;
     font-size: 1.25rem;
-    font-family: "Futura-regular";
+    font-family: "Futura PT Light";
     line-height: 1.5;
     padding-right: 1.25rem;
     font-weight: 700;
-    letter-spacing: 1.4px;
+
 }
 
 
@@ -135,16 +170,15 @@ a {
     vertical-align: initial;
 } 
 
-.main-nav__icon {
-    display: inline-block;
-    
+.main-nav__icon--collapse .main-nav__icon {
+    display: none;
     width: 0.75rem;
     height: 0.75rem;
     margin-left: 0.5rem;
     position: relative;
 }
 
-.main-nav__icon::before{
+.main-nav__icon--collapse .main-nav__icon::before{
     content: "";
     background: #ff764d;
     display: block;
@@ -156,7 +190,29 @@ a {
     transform: translate(-50%, -50%);
 }
 
-.main-nav__icon::after{
+.main-nav__hide-on-more-expanded .main-nav__icon {
+    display: inline-block;
+    
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: 0.5rem;
+    position: relative;
+}
+
+
+.main-nav__hide-on-more-expanded .main-nav__icon::before{
+    content: "";
+    background: #ff764d;
+    display: block;
+    width: 0.75rem;
+    height: 0.125rem;
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    transform: translate(-50%, -50%);
+}
+
+.main-nav__hide-on-more-expanded .main-nav__icon::after{
     content: "";
     background: #ff764d;
     height: 0.75rem;
@@ -171,22 +227,20 @@ a {
 
 .main-nav__link-list__item--try  a{
     color: blue;
-    
 }
 
 
 .main-nav__link-list__item--account {
-    font-size: .875rem;
+    font-size: 1rem;
     line-height: 1.5;
     position: relative;
-    top: 1px;
+    top: 2px;
 }
 
 
 
 .main-nav__secondary  .main-nav__link-list 
 {
-    
     height: 4.25rem;
     padding-bottom: 1.25rem;
     padding-top: 1.25rem;
@@ -194,10 +248,79 @@ a {
 }
 
 .main-nav__secondary .main-nav__link-list__item {
+   
     font-size: 1rem;
     line-height: 1.5;
 }
 
+.main-nav__more {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding-bottom: 3.4375rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: none;
+}
+
+.main-nav__section-heading {
+    font-family: "Futura PT Light";
+    font-size: 1.875rem;
+    line-height: 1.4;
+    padding-bottom: .3em;
+}
+
+.main-nav__section {
+    padding-top: 2.625rem;
+}
+
+
+.main-nav__more  .main-nav__link-list {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.main-nav__more .main-nav__link-list__item {
+    padding: 0px;
+    margin: 0px;
+    padding-right: 1.25rem;
+    margin-right: 0.625rem;
+    font-family: 'Futura PT Book';
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+.main-nav__row {
+    display: flex;
+    align-items: none;
+}
+
+.main-nav__col {
+    font-size: 1.25rem;
+    font-family: "Futura PT Book";
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding-right: 1.25rem;
+}
+
+.main-nav__col h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.main-nav__col p{
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: "Futura PT Book";
+    color: #000;
+}
+.main-nav__col--25p {
+    width: 25%;
+}
 
 
 
