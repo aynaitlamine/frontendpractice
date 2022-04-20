@@ -13,67 +13,76 @@
   </head>
   <body>
     <!-- Navbar primary start -->
-    <header>
-      <nav class="navbar-primary">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="#" class="nav-link"
-              ><img src="img/logo.svg" alt="logo"
-            /></a>
-          </li>
+    <header class="main-nav">
+      <nav class="main-nav__primary">
+        <a class="main-nav__logo" href="#">
+          <img src="img/logo.svg" alt="logo" />
+        </a>
+        <div class="main-nav__primary-wrapper">
+          <ul class="main-nav__link-list">
+            <li class="main-nav__link-list__item">
+              <a href="#">live</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">live</a>
-          </li>
+            <li class="main-nav__link-list__item">
+              <a href="#">push</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">push</a>
-          </li>
+            <li class="main-nav__link-list__item">
+              <a href="#">link</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">link</a>
-          </li>
+            <li class="main-nav__link-list__item">
+              <a href="#">shop</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">shop</a>
-          </li>
+            <li class="main-nav__link-list__item">
+              <a href="#">packs</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">packs</a>
-          </li>
+            <li class="main-nav__link-list__item">
+              <a href="#">help</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">help</a>
-          </li>
+            <li class="main-nav__link-list__item is-active">
+              <button class="abl-btn--reset main-nav__more-button">
+                <span>more</span>
+                <span class="main-nav__hide-on-more-expanded">
+                  <span class="main-nav__icon"></span>
+                </span>
+              </button>
+            </li>
 
-          <li class="nav-item item-active">
-            <a href="#" class="nav-link"
-              >more <i class="bx bx-plus bx-xs"></i
-            ></a>
-          </li>
+            <li
+              class="main-nav__link-list__item main-nav__link-list__item--try"
+            >
+              <a href="#">try live for free</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">try live for free</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">log in or register</a>
-          </li>
-        </ul>
+            <li
+              class="main-nav__link-list__item main-nav__link-list__item--account"
+            >
+              <a href="#">log in or register</a>
+            </li>
+          </ul>
+          <div class="main-nav__more"></div>
+        </div>
       </nav>
 
-      <nav class="navbar-secondary">
-        <ul class="navbar-nav">
-          <li class="nav-item item-active">
-            <a href="#" class="nav-link">about</a>
+      <div class="main-nav__separator"></div>
+
+      <nav class="main-nav__secondary">
+        <ul class="main-nav__link-list">
+          <li class="main-nav__link-list__item is-active">
+            <a href="#">about</a>
           </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">jobs</a>
+          <li class="main-nav__link-list__item">
+            <a href="#">jobs</a>
           </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">apprenticeship</a>
+          <li class="main-nav__link-list__item">
+            <a href="#">apprenticeship</a>
           </li>
         </ul>
       </nav>
