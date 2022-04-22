@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/mobile.css">
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
@@ -15,9 +16,16 @@
   <header class="main-nav">
     <nav class="main-nav__primary">
       <a class="main-nav__logo" href="#">
-        <img src="img/logo.svg" alt="logo" />
+        <svg role="img" class="main-nav__logo__image" aria-labelledby="logo" xmlns="http://www.w3.org/2000/svg"
+          width="60" height="28" viewBox="0 0 45 21">
+          <title id="logo">Ableton Homepage</title>
+          <path
+            d="M0 0h3v21H0zM6 0h3v21H6zM12 0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z">
+          </path>
+        </svg>
       </a>
-      <div class="main-nav__primary-wrapper">
+      <button class="main-nav__trigger-label abl-btn--reset js-main-nav-trigger">Menu</button>
+      <div class="main-nav__primary-wrapper main-nav__primary-wrapper--collapses">
         <ul class="main-nav__link-list">
           <li class="main-nav__link-list__item">
             <a href="#">live</a>
@@ -44,7 +52,7 @@
           </li>
 
           <li class="main-nav__link-list__item is-active">
-            <button class="abl-btn--reset main-nav__more-button">
+            <button class="abl-btn--reset main-nav__more-button js-more-nav-trigger">
               <span>more</span>
               <span class="main-nav__icon--collapse">
                 <span class="main-nav__icon"></span>
@@ -224,7 +232,7 @@
         </div>
       </div>
 
-      <div class="page-about__text">
+      <!--<div class="page-about__text">
         <div class="body-text">
           <h1>
             We are more than 350 people from 30 different countries divided
@@ -241,7 +249,7 @@
             future of music culture.
           </p>
         </div>
-      </div>
+      </div>-->
       <div class="page-about__collage page-about__collage--people">
         <div class="page-about__collage__background bg-spearmint"></div>
         <div class="page-about__collage__container">
@@ -483,7 +491,7 @@
       <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
       <script>
         document
-          .querySelector(".abl-btn--reset")
+          .querySelector(".js-more-nav-trigger")
           .addEventListener("click", function () {
             if (
               document
@@ -514,6 +522,22 @@
               ).style.display = "inline-block";
             }
           });
+
+        document.querySelector('.js-main-nav-trigger').addEventListener('click', function () {
+          if (
+            document
+              .querySelector(".main-nav")
+              .classList.contains("is-expanded")
+          ) {
+            document
+              .querySelector(".main-nav")
+              .classList.remove("is-expanded");
+          } else {
+            document
+              .querySelector(".main-nav")
+              .classList.add("is-expanded");
+          }
+        })
       </script>
 </body>
 

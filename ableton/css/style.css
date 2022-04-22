@@ -43,7 +43,7 @@
 
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box !important;
 }
@@ -74,7 +74,7 @@ a {
 /** Navbar primary start **/
 
 .main-nav {
-   
+
 
     position: relative;
     padding-top: 1.25rem;
@@ -83,12 +83,12 @@ a {
     overflow: visible;
 
 }
-.main-nav__primary-wrapper{
-        width: 100%;
 
-}
+.main-nav__primary-wrapper--collapses {
+    width: 100%;
+} 
 
-.main-nav__link-list{
+.main-nav__link-list {
     display: flex;
     padding-left: 8.75rem;
     padding-right: 2.5rem;
@@ -105,11 +105,11 @@ a {
 }
 
 
-.main-nav__separator{
+.main-nav__separator {
     border: 1px solid #eee;
 }
 
-.main-nav__link-list{
+.main-nav__link-list {
     margin-bottom: 1.25rem;
     list-style-type: none;
 }
@@ -127,26 +127,26 @@ a {
 
 
 .main-nav__link-list__item a {
-    color:#000;
+    color: #000;
 }
 
-.main-nav__link-list__item::first-letter{
+.main-nav__link-list__item::first-letter {
     text-transform: capitalize;
 }
 
 .main-nav__link-list__item.is-active a {
     color: #ff764d;
-   
+
 }
 
 .main-nav__link-list__item--try {
     margin-left: auto;
     margin-right: 0px;
-   
+
 }
 
 .abl-btn--reset {
-    
+
     display: inline-block;
     padding: 0;
     color: #ff764d;
@@ -165,10 +165,14 @@ a {
     border: none;
 }
 
+.main-nav__trigger-label {
+    display: none;
+}
+
 .main-nav__more-button {
     line-height: initial;
     vertical-align: initial;
-} 
+}
 
 .main-nav__icon--collapse .main-nav__icon {
     display: none;
@@ -178,7 +182,7 @@ a {
     position: relative;
 }
 
-.main-nav__icon--collapse .main-nav__icon::before{
+.main-nav__icon--collapse .main-nav__icon::before {
     content: "";
     background: #ff764d;
     display: block;
@@ -186,13 +190,13 @@ a {
     height: 0.125rem;
     top: 50%;
     left: 50%;
-    position:absolute;
+    position: absolute;
     transform: translate(-50%, -50%);
 }
 
 .main-nav__hide-on-more-expanded .main-nav__icon {
     display: inline-block;
-    
+
     width: 0.75rem;
     height: 0.75rem;
     margin-left: 0.5rem;
@@ -200,7 +204,7 @@ a {
 }
 
 
-.main-nav__hide-on-more-expanded .main-nav__icon::before{
+.main-nav__hide-on-more-expanded .main-nav__icon::before {
     content: "";
     background: #ff764d;
     display: block;
@@ -208,11 +212,11 @@ a {
     height: 0.125rem;
     top: 50%;
     left: 50%;
-    position:absolute;
+    position: absolute;
     transform: translate(-50%, -50%);
 }
 
-.main-nav__hide-on-more-expanded .main-nav__icon::after{
+.main-nav__hide-on-more-expanded .main-nav__icon::after {
     content: "";
     background: #ff764d;
     height: 0.75rem;
@@ -220,12 +224,12 @@ a {
     display: block;
     top: 50%;
     left: 50%;
-    position:absolute;
+    position: absolute;
     transform: translate(-50%, -50%);
 }
 
 
-.main-nav__link-list__item--try  a{
+.main-nav__link-list__item--try a {
     color: blue;
 }
 
@@ -239,8 +243,7 @@ a {
 
 
 
-.main-nav__secondary  .main-nav__link-list 
-{
+.main-nav__secondary .main-nav__link-list {
     height: 4.25rem;
     padding-bottom: 1.25rem;
     padding-top: 1.25rem;
@@ -249,7 +252,7 @@ a {
 }
 
 .main-nav__secondary .main-nav__link-list__item {
-   
+
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -275,10 +278,10 @@ a {
 }
 
 
-.main-nav__more  .main-nav__link-list {
+.main-nav__more .main-nav__link-list {
     padding: 0;
     margin: 0;
-    
+
 }
 
 .main-nav__more .main-nav__link-list__item {
@@ -306,19 +309,20 @@ a {
     padding-right: 1.25rem;
 }
 
-.main-nav__col h4{
+.main-nav__col h4 {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: capitalize;
     color: #000;
 }
 
-.main-nav__col p{
+.main-nav__col p {
     font-size: 1.25rem;
     font-weight: 400;
     font-family: "Futura PT Book";
     color: #000;
 }
+
 .main-nav__col--25p {
     width: 25%;
 }
@@ -336,7 +340,7 @@ a {
     margin-left: 8.33333vw;
     margin-right: 8.33333vw;
     margin-bottom: 8.33333vw;
-    
+
 }
 
 .page-about__header__ableton-logo {
@@ -358,7 +362,7 @@ a {
     margin: 0 auto;
 }
 
-.body-text h1{
+.body-text h1 {
     font-size: 1.875rem;
     font-family: 'Futura PT Light';
     line-height: 1.4;
@@ -372,7 +376,7 @@ a {
 
 }
 
-.body-text p{
+.body-text p {
     font-size: 1.25rem;
     font-family: 'Futura PT Light';
     line-height: 1.4;
@@ -410,16 +414,18 @@ a {
     margin-left: 8.33333vw;
 }
 
-.page-about__collage__media, .page-about__collage__container__media {
+.page-about__collage__media,
+.page-about__collage__container__media {
     position: relative;
     background-color: none;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    
+
 }
 
-.page-about__collage__media , .page-about__collage__container {
+.page-about__collage__media,
+.page-about__collage__container {
     display: inline-block;
     vertical-align: middle;
     z-index: 1;
@@ -432,7 +438,9 @@ a {
     margin-left: 8.33333vw;
 }
 
-.page-about__text, .page-about__collage, .page-about__media {
+.page-about__text,
+.page-about__collage,
+.page-about__media {
     margin-bottom: 8.33333vw;
 }
 
@@ -453,7 +461,7 @@ a {
 
 
 
-.page-about__collage--people > .page-about__collage__media {
+.page-about__collage--people>.page-about__collage__media {
     width: 41.66667vw;
     height: 41.66667vw;
     margin-left: 8vw;
@@ -501,6 +509,7 @@ a {
     height: 25vw;
     margin-left: 8.33333vw;
 }
+
 .page-about__collage--improving .page-about__collage__media:last-child {
     width: 41.66667vw;
     height: 41.66667vw;
@@ -513,14 +522,15 @@ a {
 
 
 
-.page-about__jobs-teaser__media, .page-about__jobs-teaser__text {
+.page-about__jobs-teaser__media,
+.page-about__jobs-teaser__text {
     width: 41.66667vw;
     height: 41.66667vw;
     display: inline-block;
     vertical-align: top;
     margin-left: 0;
     margin-right: 0;
-    
+
 }
 
 .page-about__jobs-teaser__media {
@@ -565,7 +575,6 @@ a {
     margin-right: auto;
     background-color: #fff;
     font-size: 1.25rem;
-
     padding-bottom: 8.33333vw;
 
 
@@ -593,7 +602,7 @@ a {
     padding-right: 8.33333vw;
 }
 
-.main-footer__content{
+.main-footer__content {
     padding-top: 8.33333vw;
 }
 
@@ -601,7 +610,7 @@ a {
     display: flex;
 }
 
-.main-footer__col{
+.main-footer__col {
 
     padding-right: 0.625rem;
     padding-bottom: 4.16667vw;
@@ -626,11 +635,12 @@ a {
     width: 188px;
 }
 
-.main-footer__list, .main-footer__social {
+.main-footer__list,
+.main-footer__social {
     list-style: none;
     margin: 0;
     padding: 0;
-    
+
 }
 
 .main-footer__list {
@@ -672,7 +682,7 @@ a {
 }
 
 .main-footer__social-button--instagram {
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .main-footer__h3 {
@@ -695,7 +705,7 @@ a {
 
 }
 
-.main-footer__form__field input[type="email"]{
+.main-footer__form__field input[type="email"] {
     font-family: 'Futura PT Book';
     font-weight: bold;
     font-size: inherit;
@@ -735,6 +745,7 @@ a {
 .main-footer__form__element--select.has-auto-width {
     display: inline-block;
 }
+
 .main-footer__secondary__select {
     margin-right: 2px;
     max-width: 200px;
@@ -745,6 +756,7 @@ a {
     width: auto;
     max-width: none;
 }
+
 .main-footer__icon-arrow--small {
     position: relative;
 }
@@ -794,8 +806,8 @@ a {
     font-family: 'Futura PT Book';
     font-weight: bold;
 
-        margin-top: 1rem;
-        width: auto;
+    margin-top: 1rem;
+    width: auto;
 }
 
 .main-footer__secondary__link-list__item {
@@ -805,7 +817,7 @@ a {
 .main-footer__secondary__signature {
     float: right;
     width: auto;
-    margin-left: 3em;
+    margin-left: auto;
     margin-top: 1rem;
 }
 
@@ -821,21 +833,3 @@ footer__secondary__signature__logo {
     margin-right: 1em;
     font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
