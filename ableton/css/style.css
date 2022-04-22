@@ -626,15 +626,17 @@ a {
     padding-top: 8.33333vw;
 }
 
-.main-footer__row {
-    display: flex;
-}
+
 
 .main-footer__col {
-
+    float:left;
     padding-right: 0.625rem;
     padding-bottom: 4.16667vw;
 
+}
+
+.main-footer__col--start {
+    float: right;
 }
 
 .main-footer__col--full {
